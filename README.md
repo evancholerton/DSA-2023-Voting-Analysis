@@ -8,7 +8,7 @@ Simple t-tests on publicly available data for DSA chapters
 
 #### Info:
 
-Chapter "leftness" is measured by that its delegates' first choice slate votes at the 2023 DSA National Convention.
+Chapter "leftness" is measured by its delegates' first-choice slate votes at the 2023 DSA National Convention.
 
 - "Left" slates are defined as:
    - Alexander Morash
@@ -28,7 +28,7 @@ Chapter "leftness" is measured by that its delegates' first choice slate votes a
    - North Star
    - Socialist Majority Caucus
 
-Delegates who ranked Aaron Berger first are treated as a special case and categorized by their second choice vote. They are categorized as "left" if they voted for 
+Delegates who ranked Aaron Berger first are treated as a special case and categorized by their second-choice vote. They are categorized as "left" if they voted for 
 - Ahmed Husain
 - C.S. Jackson
 - Catherine Elias
@@ -40,14 +40,14 @@ Delegates who ranked Aaron Berger first are treated as a special case and catego
 - Sam Heft-Luthy, or
 - Tom Julstrom
 
-for second choice; and they are categorized as "moderate" if they voted for
+for second-choice; and they are categorized as "moderate" if they voted for
 - Cara Tobe
 - Colleen Johnston
 - Grace Mausser
 - Renée Paradis, or
 - Rose DuBois
 
-for second choice.
+for second-choice.
 
 ---
 
