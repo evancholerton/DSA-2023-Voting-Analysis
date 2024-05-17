@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import ttest_ind
+from sklearn.linear_model import LogisticRegression
+import numpy as np
 import os
 
 # Get the directory where the script is located
@@ -13,10 +15,31 @@ file_path = os.path.join(script_dir, 'NPC 1st Place Vote by Chapter and Slate - 
 df = pd.read_csv(file_path)
 
 # List of moderate and left slates
-moderate_slates = ["Aaron Berger", "Groundwork", "North Star", "Socialist Majority Caucus"]
+moderate_slates = ["Groundwork", "North Star", "Socialist Majority Caucus"]
 left_slates = ["Alexander Morash", "Brandy Pride", "Julius Kapushinski", "Luisa M.", 
                "Anti-Zionist", "Bread & Roses", "Emerge", "Libertarian Socialist Caucus", 
                "Marxist Unity Group", "Red Labor", "Red Star", "Reform & Revolution"]
+
+# List of second choice candidates that determine if "Aaron Berger" voters are "left" or "moderate"
+left_second_choices = ["Ahmed Husain", "C.S. Jackson", "Catherine Elias", "John Lewis", "Jorge Rocha",
+                       "Kristin Schall", "Megan Romer", "Rashad X", "Sam Heft-Luthy", "Tom Julstrom"]
+moderate_second_choices = ["Cara Tobe", "Colleen Johnston", "Grace Mausser", "Renée Paradis", "Rose DuBois"]
+
+# Create a column to categorize the slates as 'moderate', 'left', or 'N/A'
+def categorize_slate(slate, second_choice):
+    if slate == "Aaron Berger":
+        if second_choice in left_second_choices:
+            return 'left'
+        elif second_choice in moderate_second_choices:
+            return 'moderate'
+        else:
+            return 'N/A'
+    elif slate in moderate_slates:
+        return 'moderate'
+    elif slate in left_slates:
+        return 'left'
+    else:
+        return 'N/A'
 
 # Create a column to categorize the slates as 'moderate', 'left', or 'N/A'
 def categorize_slate(slate):
@@ -63,3 +86,34 @@ plt.xlabel('Slate Category')
 plt.ylabel('Chapter Size')
 plt.savefig('chapter_size_by_slate_category.png')
 plt.show()
+
+# Logistic Regression Analysis
+
+# Prepare the data: Encode the slate category as a binary variable (0 for moderate, 1 for left)
+votes_df['slate_binary'] = votes_df['slate_category'].apply(lambda x: 1 if x == 'left' else 0)
+
+# Extract the predictor (chapter size) and the target (slate binary)
+X = votes_df[['chapter_size']]
+y = votes_df['slate_binary']
+
+# Fit the logistic regression model
+log_reg = LogisticRegression()
+log_reg.fit(X, y)
+
+# Get the coefficient and intercept
+coef = log_reg.coef_[0][0]
+intercept = log_reg.intercept_[0]
+
+# Calculate the odds ratio
+odds_ratio = np.exp(coef)
+
+# Print results
+print("\nLogistic Regression Results:")
+print(f"Coefficient: {coef}")
+print(f"Intercept: {intercept}")
+print(f"Odds Ratio: {odds_ratio}")
+
+# Visualization of the sigmoid function
+# Create a DataFrame for chapter sizes for plotting the sigmoid curve
+chapter_size_range = pd.DataFrame({'chapter_size': np.linspace(X['chapter_size'].min(), X['chapter_size'].max(), 300)})
+predicted_probabilities = log_reg.predict_proba(chapter_size_range)[:, 1]
