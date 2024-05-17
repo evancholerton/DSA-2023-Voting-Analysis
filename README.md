@@ -7,6 +7,9 @@ Simple t-tests on publicly available data for DSA chapters
 ---
 
 #### Info:
+
+Chapter "leftness" is measured by that its delegates' first choice slate votes at the 2023 DSA National Convention.
+
 - "Left" slates are defined as:
    - Alexander Morash
    - Brandy Pride
