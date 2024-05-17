@@ -53,7 +53,8 @@ for second-choice.
 
 #### Results are as follows:
 
-```Descriptive Statistics (Absolute Chapter Size):
+```
+Descriptive Statistics (Absolute Chapter Size):
                 count       mean        std  min  25%   50%   75%    max
 slate_category                                                          
 left            449.0  22.614699  27.277441  1.0  5.0  11.0  30.0  102.0
@@ -70,16 +71,6 @@ moderate        322.0  0.000565  0.000323  0.000026  0.000280  0.000580  0.00069
 
 T-Test Results (DSA % Population):
 t-statistic: -0.4863492897187075, p-value: 0.6268606275814825
-
-Logistic Regression Results (Absolute Chapter Size):
-Coefficient: -0.016948487503096833
-Intercept: 0.8380512677398374
-Odds Ratio: 0.9831943301253464
-
-Logistic Regression Results (DSA % Population):
-Coefficient: 0.00014606752677880888
-Intercept: 0.3324713221403164
-Odds Ratio: 1.0001460781951594
 ```
 ---
 
