@@ -49,6 +49,8 @@ for second-choice; and they are categorized as "moderate" if they voted for
 
 for second-choice.
 
+(IMPORTANT: The delegate-level voter data for the 2023 DSA National Convention may or may not be sensitive information. For the sake of caution, it won't be publicly available here (at least for now). If you want to clone this data and run it yourself, please contact me at evancholerton@gmail.com, and send verification that you're a DSA member.)
+
 ---
 
 #### Results are as follows:
