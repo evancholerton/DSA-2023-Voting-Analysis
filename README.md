@@ -53,7 +53,7 @@ for second-choice.
 
 #### Results are as follows:
 
-Descriptive Statistics (Absolute Chapter Size):
+```Descriptive Statistics (Absolute Chapter Size):
                 count       mean        std  min  25%   50%   75%    max
 slate_category                                                          
 left            449.0  22.614699  27.277441  1.0  5.0  11.0  30.0  102.0
@@ -80,7 +80,7 @@ Logistic Regression Results (DSA % Population):
 Coefficient: 0.00014606752677880888
 Intercept: 0.3324713221403164
 Odds Ratio: 1.0001460781951594
-
+```
 ---
 
 DSA 2023 Voting Analysis by Evan Cholerton is marked with CC0 1.0 Universal. To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/
