@@ -1,5 +1,5 @@
 # DSA 2023 Voting Analysis
-Simple t-tests on publicly available data for DSA chapters
+Simple t-test on publicly available info for DSA chapters related to the 2023 DSA National Convention
 
 - Are bigger chapters really more "moderate"? (Yes)
 - Are bigger chapters *relative to their area's overall population* more "moderate"? (No)
