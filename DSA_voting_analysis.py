@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import ttest_ind
 from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
 import os
 
@@ -22,7 +23,7 @@ left_slates = ["Alexander Morash", "Brandy Pride", "Julius Kapushinski", "Luisa 
                "Anti-Zionist", "Bread & Roses", "Emerge", "Libertarian Socialist Caucus", 
                "Marxist Unity Group", "Red Labor", "Red Star", "Reform & Revolution"]
 
-# List of second choice candidates that determine if Aaron Berger voters are "left" or "moderate"
+# List of second choice candidates that determine if "Aaron Berger" voters are "left" or "moderate"
 left_second_choices = ["Ahmed Husain", "C.S. Jackson", "Catherine Elias", "John Lewis", "Jorge Rocha",
                        "Kristin Schall", "Megan Romer", "Rashad X", "Sam Heft-Luthy", "Tom Julstrom"]
 moderate_second_choices = ["Cara Tobe", "Colleen Johnston", "Grace Mausser", "Renée Paradis", "Rose DuBois"]
@@ -46,8 +47,6 @@ def categorize_slate(slate, second_choice):
 # Use '2th' for the second choice votes
 df['slate_category'] = df.apply(lambda row: categorize_slate(row['Slate'], row['2th']), axis=1)
 
-# Absolute Size Analysis
-
 # Exclude N/A votes from the analysis but keep them for chapter size calculation
 votes_df = df[df['slate_category'] != 'N/A']
 
@@ -55,28 +54,26 @@ votes_df = df[df['slate_category'] != 'N/A']
 chapter_sizes = df.groupby('DSA Chapter')['Voter'].count()
 
 # Add chapter sizes to the votes_df
-votes_df = votes_df.merge(chapter_sizes.rename('chapter_size'), left_on='DSA Chapter', right_index=True)
+votes_df = votes_df.merge(chapter_sizes.rename('Absolute Chapter Size'), left_on='DSA Chapter', right_index=True)
 
 # Merge with the new dataframe
 merged_df = votes_df.merge(new_df, left_on='DSA Chapter', right_on='Chapter', how='left')
 
-#Relative Size Analysis
-
 # Convert the % population (high) columns to numeric
-merged_df['% population (high)'] = merged_df['% population (high)'].str.rstrip('%').astype('float') / 100
+merged_df['DSA % Population'] = merged_df['% population (high)'].str.rstrip('%').astype('float') / 100
 
-# Drop rows with missing values in the % population (high) column
-merged_df = merged_df.dropna(subset=['% population (high)'])
+# Drop rows with missing values in the DSA % Population column
+merged_df = merged_df.dropna(subset=['DSA % Population'])
 
-# Calculate descriptive statistics for chapter sizes and % population (high) based on slate category
-descriptive_stats_sizes = merged_df.groupby('slate_category')['chapter_size'].describe()
-descriptive_stats_population_high = merged_df.groupby('slate_category')['% population (high)'].describe()
+# Calculate descriptive statistics for Absolute Chapter Size and DSA % Population based on slate category
+descriptive_stats_sizes = merged_df.groupby('slate_category')['Absolute Chapter Size'].describe()
+descriptive_stats_population_high = merged_df.groupby('slate_category')['DSA % Population'].describe()
 
-# Extract chapter sizes and % population (high) for each group
-left_sizes = merged_df[merged_df['slate_category'] == 'left']['chapter_size']
-moderate_sizes = merged_df[merged_df['slate_category'] == 'moderate']['chapter_size']
-left_population_high = merged_df[merged_df['slate_category'] == 'left']['% population (high)']
-moderate_population_high = merged_df[merged_df['slate_category'] == 'moderate']['% population (high)']
+# Extract Absolute Chapter Size and DSA % Population for each group
+left_sizes = merged_df[merged_df['slate_category'] == 'left']['Absolute Chapter Size']
+moderate_sizes = merged_df[merged_df['slate_category'] == 'moderate']['Absolute Chapter Size']
+left_population_high = merged_df[merged_df['slate_category'] == 'left']['DSA % Population']
+moderate_population_high = merged_df[merged_df['slate_category'] == 'moderate']['DSA % Population']
 
 # Perform t-tests
 t_stat_sizes, p_value_sizes = ttest_ind(left_sizes, moderate_sizes, equal_var=False)
@@ -93,19 +90,19 @@ print(descriptive_stats_population_high)
 print("\nT-Test Results (DSA % Population):")
 print(f"t-statistic: {t_stat_population_high}, p-value: {p_value_population_high}")
 
-# Visualization for chapter sizes
+# Visualization for Absolute Chapter Size
 plt.figure(figsize=(10, 6))
-merged_df.boxplot(column='chapter_size', by='slate_category')
-plt.title('Chapter Size by Slate Category')
+merged_df.boxplot(column='Absolute Chapter Size', by='slate_category')
+plt.title('Absolute Chapter Size by Slate Category')
 plt.suptitle('')
 plt.xlabel('Slate Category')
-plt.ylabel('Chapter Size')
-plt.savefig('chapter_size_by_slate_category.png')
+plt.ylabel('Absolute Chapter Size')
+plt.savefig('absolute_chapter_size_by_slate_category.png')
 plt.show()
 
-# Visualization for % population (high)
+# Visualization for DSA % Population
 plt.figure(figsize=(10, 6))
-merged_df.boxplot(column='% population (high)', by='slate_category')
+merged_df.boxplot(column='DSA % Population', by='slate_category')
 plt.title('DSA % Population by Slate Category')
 plt.suptitle('')
 plt.xlabel('Slate Category')
@@ -118,40 +115,54 @@ plt.show()
 # Prepare the data: Encode the slate category as a binary variable (0 for moderate, 1 for left)
 merged_df['slate_binary'] = merged_df['slate_category'].apply(lambda x: 1 if x == 'left' else 0)
 
-# Extract the predictors (chapter size and % population (high)) and the target (slate binary)
-X_sizes = merged_df[['chapter_size']]
-X_population_high = merged_df[['% population (high)']]
-y = merged_df['slate_binary']
-
-# Fit the logistic regression model for chapter sizes
+# Separate logistic regression for Absolute Chapter Size
+X_sizes = merged_df[['Absolute Chapter Size']]
+poly_sizes = PolynomialFeatures(degree=2, include_bias=False)
+X_sizes_poly = poly_sizes.fit_transform(X_sizes)
 log_reg_sizes = LogisticRegression()
-log_reg_sizes.fit(X_sizes, y)
+log_reg_sizes.fit(X_sizes_poly, merged_df['slate_binary'])
 
-# Get the coefficient and intercept for chapter sizes
-coef_sizes = log_reg_sizes.coef_[0][0]
-intercept_sizes = log_reg_sizes.intercept_[0]
-
-# Calculate the odds ratio for chapter sizes
-odds_ratio_sizes = np.exp(coef_sizes)
-
-# Fit the logistic regression model for % population (high)
+# Separate logistic regression for DSA % Population
+X_population_high = merged_df[['DSA % Population']]
+poly_population_high = PolynomialFeatures(degree=2, include_bias=False)
+X_population_high_poly = poly_population_high.fit_transform(X_population_high)
 log_reg_population_high = LogisticRegression()
-log_reg_population_high.fit(X_population_high, y)
+log_reg_population_high.fit(X_population_high_poly, merged_df['slate_binary'])
 
-# Get the coefficient and intercept for % population (high)
-coef_population_high = log_reg_population_high.coef_[0][0]
-intercept_population_high = log_reg_population_high.intercept_[0]
+# Generate a range of values for plotting
+X_test_sizes = pd.DataFrame(np.linspace(X_sizes['Absolute Chapter Size'].min(), X_sizes['Absolute Chapter Size'].max(), 500), columns=['Absolute Chapter Size'])
+X_test_population_high = pd.DataFrame(np.linspace(X_population_high['DSA % Population'].min(), X_population_high['DSA % Population'].max(), 500), columns=['DSA % Population'])
 
-# Calculate the odds ratio for % population (high)
-odds_ratio_population_high = np.exp(coef_population_high)
+# Create polynomial features for the test data
+X_test_sizes_poly = poly_sizes.transform(X_test_sizes)
+X_test_population_high_poly = poly_population_high.transform(X_test_population_high)
 
-# Print results for logistic regression
-print("\nLogistic Regression Results (Absolute Chapter Size):")
-print(f"Coefficient: {coef_sizes}")
-print(f"Intercept: {intercept_sizes}")
-print(f"Odds Ratio: {odds_ratio_sizes}")
+# Ensure no feature names are included during prediction
+X_test_sizes_poly = pd.DataFrame(X_test_sizes_poly)
+X_test_population_high_poly = pd.DataFrame(X_test_population_high_poly)
 
-print("\nLogistic Regression Results (DSA % Population):")
-print(f"Coefficient: {coef_population_high}")
-print(f"Intercept: {intercept_population_high}")
-print(f"Odds Ratio: {odds_ratio_population_high}\n")
+# Predict probabilities
+y_pred_sizes = log_reg_sizes.predict_proba(X_test_sizes_poly)[:, 1]
+y_pred_population_high = log_reg_population_high.predict_proba(X_test_population_high_poly)[:, 1]
+
+# Plot the logistic regression curve for Absolute Chapter Size
+plt.figure(figsize=(10, 6))
+plt.scatter(X_sizes, merged_df['slate_binary'], label='Data', alpha=0.3)
+plt.plot(X_test_sizes, y_pred_sizes, color='red', label='Logistic Regression Curve')
+plt.xlabel('Absolute Chapter Size')
+plt.ylabel('Probability of Left Slate')
+plt.title('Logistic Regression Curve for Absolute Chapter Size')
+plt.legend()
+plt.savefig('logistic_regression_curve_chapter_sizes.png')
+plt.show()
+
+# Plot the logistic regression curve for DSA % Population
+plt.figure(figsize=(10, 6))
+plt.scatter(X_population_high, merged_df['slate_binary'], label='Data', alpha=0.3)
+plt.plot(X_test_population_high, y_pred_population_high, color='red', label='Logistic Regression Curve')
+plt.xlabel('DSA % Population')
+plt.ylabel('Probability of Left Slate')
+plt.title('Logistic Regression Curve for DSA % Population')
+plt.legend()
+plt.savefig('logistic_regression_curve_population_high.png')
+plt.show()
