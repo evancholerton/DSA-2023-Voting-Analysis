@@ -1,0 +1,209 @@
+chapter,region,percentage_of_urbanized_population,median_income
+Akron,Region_0,0,59447.5
+Alachua County,Region_1,0,49896.0
+Albuquerque,Region_2,0,50769.0
+Amarillo,Region_3,0,57817.0
+Asheville,Region_4,0,53319.5
+Athens Area,Region_5,0,51085.5
+Atlanta,Region_6,0,55924.0
+Austin,Region_7,0,64024.0
+Bartholomew County,Region_8,0,62394.5
+Baton Rouge,Region_9,0,54750.0
+Berks,Region_10,0,69063.0
+Berkshires,Region_11,0,
+Big Island,Region_12,0,59937.0
+Billings,Region_13,0,57083.5
+Binghamton,Region_14,0,56018.0
+Birmingham,Region_15,0,51871.0
+Bloomington Indiana,Region_16,0,52555.0
+Boise,Region_17,0,60516.5
+Boston,Region_18,0,
+Boulder,Region_19,0,85130.0
+Bozeman,Region_20,0,57024.5
+Brainerd Lakes Area,Region_21,0,52560.5
+Broward County,Region_22,0,61470.0
+Buffalo,Region_23,0,58957.0
+Cape Cod,Region_24,0,
+Capital District,Region_25,0,63378.0
+Cedar Rapids,Region_26,0,74000.0
+Central Arkansas,Region_27,0,54498.0
+Central Coast California,Region_28,0,71849.5
+Central Indiana,Region_29,0,58461.5
+Central Iowa,Region_30,0,68750.0
+Central New Jersey,Region_31,0,
+Central Sierra Foothills,Region_32,0,73432.0
+Central Vermont,Region_33,0,
+Centre County,Region_34,0,51458.0
+Champaign-Urbana,Region_35,0,65234.0
+Champlain Valley,Region_36,0,
+Charleston,Region_37,0,45761.0
+Charlotte Metro,Region_38,0,61454.0
+Charlottesville,Region_39,0,63988.0
+Chattanooga,Region_40,0,52048.0
+Chicago,Region_41,0,64784.5
+Cleveland,Region_42,0,59519.0
+Colorado Springs,Region_43,0,60674.0
+Columbia,Region_44,0,44307.0
+Columbus,Region_45,0,64896.0
+Connecticut,Region_46,0,
+Corpus Christi,Region_47,0,49823.0
+Coulee Region,Region_48,0,57001.5
+Dayton-Miami Valley,Region_49,0,60414.0
+Delaware,Region_50,0,66631.0
+Denver,Region_51,0,75772.0
+East Bay,Region_52,0,96493.0
+El Chuco,Region_53,0,39537.5
+Erie,Region_54,0,54002.0
+Eugene-Springfield,Region_55,0,55735.0
+Fort Collins,Region_56,0,72704.5
+Fort Smith,Region_57,0,43794.0
+Fort Wayne,Region_58,0,60674.5
+Fort Worth,Region_59,0,67962.0
+Frederick,Region_60,0,80875.0
+Fresno,Region_61,0,47524.0
+Grand Rapids,Region_62,0,57382.5
+Greater Baltimore,Region_63,0,98337.0
+Greater Flint,Region_64,0,49943.0
+Greater Lafayette,Region_65,0,58047.0
+Greater Lansing,Region_66,0,63416.0
+Green Bay,Region_67,0,70218.0
+Helena,Region_68,0,58435.0
+High Peaks,Region_69,0,54091.5
+Houston,Region_70,0,64133.0
+Huron Valley,Region_71,0,62406.0
+Inland Empire,Region_72,0,60293.0
+Iowa City,Region_73,0,66605.0
+Ithaca,Region_74,0,61296.0
+Jacksonville,Region_75,0,59349.0
+Kansas City,Region_76,0,67490.0
+Knoxville,Region_77,0,45024.0
+Lakefront,Region_78,0,91656.0
+Las Vegas,Region_79,0,61787.0
+Lawrence,Region_80,0,62234.0
+Lehigh Valley,Region_81,0,70374.0
+Lexington,Region_82,0,64363.0
+Lincoln,Region_83,0,75804.0
+Long Beach,Region_84,0,73391.0
+Los Angeles,Region_85,0,71400.0
+Louisville,Region_86,0,58534.0
+Lower Hudson Valley,Region_87,0,110685.0
+Lubbock,Region_88,0,48553.0
+Madison Area,Region_89,0,63243.0
+Mahoning Valley,Region_90,0,51022.0
+Maine,Region_91,0,
+Manhattan,Region_92,0,55721.0
+Marin,Region_93,0,108949.5
+Memphis Midsouth,Region_94,0,42273.0
+Metro Cincinnati & Northern Kentucky,Region_95,0,63447.0
+Metro DC,Region_96,0,111825.0
+Metro Detroit,Region_97,0,66063.0
+Miami,Region_98,0,53480.0
+Mid-Hudson Valley,Region_99,0,81653.0
+Mid-Missouri,Region_100,0,59729.5
+Middle Tennessee,Region_101,0,51843.5
+Milwaukee,Region_102,0,74840.0
+Mobile Bay,Region_103,0,48544.0
+Nassau County,Region_104,0,125486.0
+New Orleans,Region_105,0,52055.5
+New River Valley,Region_106,0,56016.0
+New York City,Region_107,0,67773.0
+North Alabama,Region_108,0,43679.0
+North Central Valley,Region_109,0,55470.0
+North Central West Virginia,Region_110,0,47217.0
+North Coast Oregon,Region_111,0,49976.0
+North New Jersey,Region_112,0,
+North Olympic,Region_113,0,52389.5
+North Texas,Region_114,0,66157.5
+Northeast Arkansas,Region_115,0,40060.5
+Northeast Pennsylvania,Region_116,0,55750.0
+Northeast Tennessee,Region_117,0,43372.0
+Northern Illinois,Region_118,0,62198.0
+Northern Indiana,Region_119,0,58173.0
+Northern Nevada,Region_120,0,62797.0
+Northwest Arkansas,Region_121,0,64901.0
+Northwest Indiana,Region_122,0,53306.0
+Northwest Ohio,Region_123,0,62509.0
+Oklahoma City,Region_124,0,61250.0
+Olympia,Region_125,0,60921.0
+Orange County,Region_126,0,98689.0
+Orlando,Region_127,0,62421.0
+Ozarks,Region_128,0,46598.0
+Palm Beach County,Region_129,0,60439.5
+Palouse,Region_130,0,59063.0
+Pasco-Hernando,Region_131,0,54469.0
+Peninsula California,Region_132,0,125500.0
+Pennsylvania Wilds,Region_133,0,46100.0
+Pensacola,Region_134,0,57424.0
+Philadelphia,Region_135,0,81519.0
+Phoenix,Region_136,0,61399.5
+Pinellas County,Region_137,0,54063.0
+Pittsburgh,Region_138,0,56731.0
+Polk County,Region_139,0,48519.0
+Portland,Region_140,0,75532.5
+Quad Cities,Region_141,0,60784.0
+Red River Valley,Region_142,0,66642.0
+Rhode Island,Region_143,0,
+Richmond,Region_144,0,69451.0
+Rio Grande Valley,Region_145,0,37639.0
+River Valley,Region_146,0,
+Rochester,Region_147,0,62025.0
+Rock River,Region_148,0,66011.0
+Sacramento,Region_149,0,62950.0
+Salem,Region_150,0,65149.5
+Salina,Region_151,0,57438.0
+Salt Lake,Region_152,0,75588.5
+San Antonio,Region_153,0,59531.0
+San Diego,Region_154,0,81034.5
+San Francisco,Region_155,0,121274.5
+San Luis Obispo,Region_156,0,67766.0
+San Marcos,Region_157,0,66496.5
+Santa Barbara,Region_158,0,90341.0
+Santa Cruz,Region_159,0,79233.0
+Santa Fe,Region_160,0,45331.5
+Savannah,Region_161,0,73125.0
+Seattle,Region_162,0,97196.5
+Shasta County,Region_163,0,51412.5
+Shreveport-Bossier,Region_164,0,50612.0
+Silicon Valley,Region_165,0,130227.0
+Sioux Empire,Region_166,0,62703.0
+Snohomish County,Region_167,0,83900.5
+South New Jersey,Region_168,0,
+Southeast Idaho,Region_169,0,56977.0
+Southeast Missouri,Region_170,0,48113.0
+Southern Illinois,Region_171,0,46723.0
+Southern Indiana,Region_172,0,53750.0
+Southern Maryland,Region_173,0,97229.0
+Southern New Hampshire,Region_174,0,
+Southern Oregon,Region_175,0,45594.0
+Southwest Florida,Region_176,0,63389.0
+Southwest Louisiana,Region_177,0,46995.0
+Southwest Michigan,Region_178,0,57475.0
+Space Coast,Region_179,0,55873.5
+Spokane,Region_180,0,55226.0
+St. Louis,Region_181,0,60320.0
+Steel Valley,Region_182,0,57791.0
+Suffolk County,Region_183,0,103523.0
+Syracuse,Region_184,0,58898.0
+Tacoma & Pierce County,Region_185,0,75308.0
+Tampa,Region_186,0,63899.0
+Tidewater,Region_187,0,61016.0
+Topeka,Region_188,0,58958.5
+Triangle,Region_189,0,54278.5
+Troy,Region_190,0,76831.5
+Tucson,Region_191,0,57419.0
+Tulare County,Region_192,0,39289.5
+Twin Cities,Region_193,0,81278.0
+Twin Ports,Region_194,0,51953.0
+Upper Valley,Region_195,0,
+Ventura County,Region_196,0,91063.5
+West River,Region_197,0,51732.0
+West Sound,Region_198,0,70015.0
+West Suburban Illinois,Region_199,0,90198.0
+Western Illinois,Region_200,0,55000.0
+Western Montana,Region_201,0,52875.0
+Whatcom County,Region_202,0,64763.0
+Wichita,Region_203,0,55682.0
+Wilmington,Region_204,0,46005.5
+Winston-Salem,Region_205,0,48989.0
+Worcester,Region_206,0,
+Yolo County,Region_207,0,59950.0
