@@ -13,7 +13,7 @@ file_path = os.path.join(script_dir, 'NPC 1st Place Vote by Chapter and Slate - 
 df = pd.read_csv(file_path)
 
 # List of moderate and left slates
-moderate_slates = ["Groundwork", "North Star", "Socialist Majority Caucus"]
+moderate_slates = ["Aaron Berger", "Groundwork", "North Star", "Socialist Majority Caucus"]
 left_slates = ["Alexander Morash", "Brandy Pride", "Julius Kapushinski", "Luisa M.", 
                "Anti-Zionist", "Bread & Roses", "Emerge", "Libertarian Socialist Caucus", 
                "Marxist Unity Group", "Red Labor", "Red Star", "Reform & Revolution"]
