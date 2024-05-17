@@ -22,7 +22,7 @@ left_slates = ["Alexander Morash", "Brandy Pride", "Julius Kapushinski", "Luisa 
                "Anti-Zionist", "Bread & Roses", "Emerge", "Libertarian Socialist Caucus", 
                "Marxist Unity Group", "Red Labor", "Red Star", "Reform & Revolution"]
 
-# List of second choice candidates that determine if "Aaron Berger" voters are "left" or "moderate"
+# List of second choice candidates that determine if Aaron Berger voters are "left" or "moderate"
 left_second_choices = ["Ahmed Husain", "C.S. Jackson", "Catherine Elias", "John Lewis", "Jorge Rocha",
                        "Kristin Schall", "Megan Romer", "Rashad X", "Sam Heft-Luthy", "Tom Julstrom"]
 moderate_second_choices = ["Cara Tobe", "Colleen Johnston", "Grace Mausser", "Renée Paradis", "Rose DuBois"]
