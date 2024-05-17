@@ -46,6 +46,8 @@ def categorize_slate(slate, second_choice):
 # Use '2th' for the second choice votes
 df['slate_category'] = df.apply(lambda row: categorize_slate(row['Slate'], row['2th']), axis=1)
 
+# Absolute Size Analysis
+
 # Exclude N/A votes from the analysis but keep them for chapter size calculation
 votes_df = df[df['slate_category'] != 'N/A']
 
@@ -57,6 +59,8 @@ votes_df = votes_df.merge(chapter_sizes.rename('chapter_size'), left_on='DSA Cha
 
 # Merge with the new dataframe
 merged_df = votes_df.merge(new_df, left_on='DSA Chapter', right_on='Chapter', how='left')
+
+#Relative Size Analysis
 
 # Convert the % population (high) columns to numeric
 merged_df['% population (high)'] = merged_df['% population (high)'].str.rstrip('%').astype('float') / 100
@@ -79,9 +83,9 @@ t_stat_sizes, p_value_sizes = ttest_ind(left_sizes, moderate_sizes, equal_var=Fa
 t_stat_population_high, p_value_population_high = ttest_ind(left_population_high, moderate_population_high, equal_var=False)
 
 # Print results
-print("\nDescriptive Statistics (Chapter Sizes):")
+print("\nDescriptive Statistics (Absolute Chapter Size):")
 print(descriptive_stats_sizes)
-print("\nT-Test Results (Chapter Sizes):")
+print("\nT-Test Results (Absolute Chapter Size):")
 print(f"t-statistic: {t_stat_sizes}, p-value: {p_value_sizes}")
 
 print("\nDescriptive Statistics (DSA % Population):")
@@ -142,7 +146,7 @@ intercept_population_high = log_reg_population_high.intercept_[0]
 odds_ratio_population_high = np.exp(coef_population_high)
 
 # Print results for logistic regression
-print("\nLogistic Regression Results (Chapter Sizes):")
+print("\nLogistic Regression Results (Absolute Chapter Size):")
 print(f"Coefficient: {coef_sizes}")
 print(f"Intercept: {intercept_sizes}")
 print(f"Odds Ratio: {odds_ratio_sizes}")
