@@ -1,9 +1,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import ttest_ind
+import os
 
-# Update the file_path with the full path to your CSV file
-file_path = '/Users/evanc/Library/CloudStorage/GoogleDrive-evancholerton@uchicago.edu/My Drive/Work/DSA/DSA Stats/Big Chapters vs Small Chapters/NPC 1st Place Vote by Chapter and Slate - NPC Raw Data.csv'
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Update the file_path to be relative to the script directory
+file_path = os.path.join(script_dir, 'NPC 1st Place Vote by Chapter and Slate - NPC Raw Data.csv')
+
+# Load the CSV file
 df = pd.read_csv(file_path)
 
 # List of moderate and left slates
