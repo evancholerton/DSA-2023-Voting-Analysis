@@ -23,7 +23,7 @@ Chapter "leftness" is measured by that its delegates' first choice slate votes a
    - Red Labor
    - Red Star
    - Reform & Revolution
-- "Moderate slates are defined as:
+- "Moderate" slates are defined as:
    - Groundwork
    - North Star
    - Socialist Majority Caucus
