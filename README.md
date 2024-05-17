@@ -6,7 +6,7 @@ Simple t-tests on publicly available data for DSA chapters
 
 ---
 
-Info:
+#### Info:
 - "Left" slates are defined as:
    - Alexander Morash
    - Brandy Pride
@@ -25,7 +25,7 @@ Info:
    - North Star
    - Socialist Majority Caucus
 
-*Note:* Delegates who ranked Aaron Berger first are treated as a special case and categorized by their second choice vote. They are categorized as "left" if they voted for 
+Delegates who ranked Aaron Berger first are treated as a special case and categorized by their second choice vote. They are categorized as "left" if they voted for 
 - Ahmed Husain
 - C.S. Jackson
 - Catherine Elias
