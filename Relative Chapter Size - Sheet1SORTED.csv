@@ -1,0 +1,160 @@
+Chapter,State,Delegates,Population,Implied minimum,Implied maximum,% population (low),% population (high)
+San Francisco,California,15,"686,204","1,088","1,162",0.1586%,0.1693%
+Ithaca,New York,2,"127,661",113,187,0.0885%,0.1465%
+Santa Cruz,California,4,"244,547",263,337,0.1075%,0.1378%
+Whatcom County,Washington,3,"197,420",188,262,0.0952%,0.1327%
+Troy,New York,2,"159,644",113,187,0.0708%,0.1171%
+Seattle,Washington,24,"1,619,071","1,763","1,837",0.1089%,0.1135%
+Southern Illinois,Illinois,1,"100,780",1,112,0.0010%,0.1111%
+New York City,New York,102,"7,118,528","7,613","7,687",0.1069%,0.1080%
+Portland,Oregon,28,"2,066,884","2,063","2,137",0.0998%,0.1034%
+Berkshires,Massachusetts,1,"112,249",1,112,0.0009%,0.0998%
+Boulder,Colorado,4,"350,297",263,337,0.0751%,0.0962%
+Bozeman,Montana,1,"121,276",1,112,0.0008%,0.0924%
+Upper Valley,"Multiple (New 
+Hampshire, Vermont)",1,"123,075",1,112,0.0008%,0.0910%
+Twin Ports,Minnesota,2,"213,600",113,187,0.0529%,0.0875%
+Iowa City,Iowa,1,"131,737",1,112,0.0008%,0.0850%
+Marin,California,2,"235,274",113,187,0.0480%,0.0795%
+Chicago,Illinois,38,"3,724,958","2,813","2,887",0.0755%,0.0775%
+Greater Lafayette,Indiana,1,"145,014",1,112,0.0007%,0.0772%
+Lawrence,Kansas,1,"147,151",1,112,0.0007%,0.0761%
+Central Vermont,Vermont,1,"154,670",1,112,0.0006%,0.0724%
+Champaign-Urbana,Illinois,1,"158,862",1,112,0.0006%,0.0705%
+River Valley,Massachusetts,5,"588,014",338,412,0.0575%,0.0701%
+Santa Barbara,California,1,"160,110",1,112,0.0006%,0.0700%
+East Bay,California,27,"2,970,341","1,988","2,062",0.0669%,0.0694%
+Santa Fe,New Mexico,1,"163,725",1,112,0.0006%,0.0684%
+Western Montana,Montana,1,"166,507",1,112,0.0006%,0.0673%
+Brainerd Lakes Area,Minnesota,1,"166,891",1,112,0.0006%,0.0671%
+Charlottesville,Virginia,4,"505,102",263,337,0.0521%,0.0667%
+Olympia,Washington,3,"395,779",188,262,0.0475%,0.0662%
+Madison Area,Wisconsin,5,"646,718",338,412,0.0523%,0.0637%
+Yolo County,California,1,"176,960",1,112,0.0006%,0.0633%
+Boston,Massachusetts,30,"3,707,410","2,213","2,287",0.0597%,0.0617%
+Mid-Hudson Valley,New York,6,"794,541",413,487,0.0520%,0.0613%
+Eugene-Springfield,Oregon,2,"307,486",113,187,0.0367%,0.0608%
+Metro DC,"Multiple (D.C., 
+Maryland, Virginia)",38,"4,858,721","2,813","2,887",0.0579%,0.0594%
+Asheville,North Carolina,3,"440,966",188,262,0.0426%,0.0594%
+Huron Valley,Michigan,5,"693,792",338,412,0.0487%,0.0594%
+Los Angeles,California,58,"7,565,009","4,313","4,387",0.0570%,0.0580%
+Austin,Texas,18,"2,514,006","1,313","1,387",0.0522%,0.0552%
+Wilmington,North Carolina,1,"208,700",1,112,0.0005%,0.0537%
+Denver,Colorado,15,"2,169,939","1,088","1,162",0.0501%,0.0535%
+Athens Area,Georgia,2,"353,389",113,187,0.0320%,0.0529%
+Maine,Maine,8,"1,218,507",563,637,0.0462%,0.0523%
+New Orleans,Louisiana,7,"1,075,103",488,562,0.0454%,0.0523%
+Fort Collins,Colorado,2,"362,217",113,187,0.0312%,0.0516%
+Western Illinois,Illinois,1,"217,729",1,112,0.0005%,0.0514%
+Twin Cities,Minnesota,22,"3,301,885","1,613","1,687",0.0489%,0.0511%
+Peninsula California,California,3,"519,408",188,262,0.0362%,0.0504%
+Fort Smith,Arkansas,1,"224,799",1,112,0.0004%,0.0498%
+Greater Lansing,Michigan,2,"401,328",113,187,0.0282%,0.0466%
+Capital District,New York,5,"886,555",338,412,0.0381%,0.0465%
+Philadelphia,Pennsylvania,21,"3,570,566","1,538","1,612",0.0431%,0.0451%
+Cape Cod,Massachusetts,1,"252,804",1,112,0.0004%,0.0443%
+Mid-Missouri,Missouri,1,"263,525",1,112,0.0004%,0.0425%
+Rhode Island (Providence),Rhode Island,5,"980,680",338,412,0.0345%,0.0420%
+Tacoma & Pierce County,Washington,4,"808,219",263,337,0.0325%,0.0417%
+Buffalo,New York,5,"988,692",338,412,0.0342%,0.0417%
+Rochester,New York,5,"997,399",338,412,0.0339%,0.0413%
+Pittsburgh,Pennsylvania,10,"1,948,812",713,787,0.0366%,0.0404%
+Lakefront,Illinois,1,"281,040",1,112,0.0004%,0.0399%
+Lincoln,Nebraska,1,"296,173",1,112,0.0003%,0.0378%
+Louisville,"Multiple
+(Kentucky, Indiana)",5,"1,181,475",338,412,0.0286%,0.0349%
+Erie,Pennsylvania,1,"322,325",1,112,0.0003%,0.0347%
+San Luis Obispo,California,1,"328,750",1,112,0.0003%,0.0341%
+Snohomish County,Washington,3,"773,628",188,262,0.0243%,0.0339%
+Lubbock,Texas,1,"339,041",1,112,0.0003%,0.0330%
+Columbus,Ohio,8,"1,932,313",563,637,0.0291%,0.0330%
+Pinellas County,Florida,3,"810,820",188,262,0.0232%,0.0323%
+Cleveland,Ohio,7,"1,751,863",488,562,0.0279%,0.0321%
+Milwaukee,Wisconsin,7,"1,768,153",488,562,0.0276%,0.0318%
+Metro Cincinnati & Northern Kentucky,"Multiple
+(Kentucky, Ohio)",7,"1,795,597",488,562,0.0272%,0.0313%
+Lower Hudson Valley,New York,5,"1,319,950",338,412,0.0256%,0.0312%
+Corpus Christi,Texas,1,"360,946",1,112,0.0003%,0.0310%
+Akron,Ohio,3,"852,835",188,262,0.0220%,0.0307%
+Connecticut,Connecticut,12,"3,197,079",863,937,0.0270%,0.0293%
+Salem,Oregon,1,"383,164",1,112,0.0003%,0.0292%
+Delaware,Delaware,3,"898,556",188,262,0.0209%,0.0292%
+Worcester,Massachusetts,3,"900,923",188,262,0.0209%,0.0291%
+Centre County,Pennsylvania,1,"387,526",1,112,0.0003%,0.0289%
+Triangle,North Carolina,9,"2,474,666",638,712,0.0258%,0.0288%
+Long Beach,California,4,"1,183,465",263,337,0.0222%,0.0285%
+Kansas City,"Multiple
+(Kansas, Missouri)",6,"1,718,158",413,487,0.0240%,0.0283%
+Central Sierra Foothills,California,2,"664,444",113,187,0.0170%,0.0281%
+Central New Jersey,New Jersey,5,"1,464,886",338,412,0.0231%,0.0281%
+Metro Detroit,Michigan,13,"3,614,321",938,"1,012",0.0260%,0.0280%
+Boise,Idaho,2,"678,490",113,187,0.0167%,0.0276%
+Las Vegas,Nevada,7,"2,040,042",488,562,0.0239%,0.0275%
+Red River Valley,"Multiple (Minnesota, 
+North Dakota)",1,"407,199",1,112,0.0002%,0.0275%
+Syracuse,New York,3,"962,767",188,262,0.0195%,0.0272%
+Polk County,Florida,2,"687,729",113,187,0.0164%,0.0272%
+Northeast Tennessee,Tennessee,1,"425,956",1,112,0.0002%,0.0263%
+Southern New Hampshire,New Hampshire,3,"1,009,887",188,262,0.0186%,0.0259%
+San Antonio,Texas,7,"2,187,279",488,562,0.0223%,0.0257%
+San Diego,California,10,"3,079,168",713,787,0.0232%,0.0256%
+Charleston,South Carolina,2,"737,423",113,187,0.0153%,0.0254%
+Silicon Valley,California,6,"1,921,781",413,487,0.0215%,0.0253%
+Mahoning Valley,Ohio,1,"446,930",1,112,0.0002%,0.0251%
+Sacramento,California,8,"2,547,623",563,637,0.0221%,0.0250%
+Savannah,Georgia,1,"462,738",1,112,0.0002%,0.0242%
+Quad Cities,"Multiple
+(Iowa, Illinois)",1,"472,122",1,112,0.0002%,0.0237%
+Knoxville,Tennessee,3,"1,133,079",188,262,0.0166%,0.0231%
+Dayton-Miami Valley,Ohio,2,"819,561",113,187,0.0138%,0.0228%
+Orlando,Florida,6,"2,137,070",413,487,0.0193%,0.0228%
+St. Louis,Missouri,7,"2,526,111",488,562,0.0193%,0.0222%
+Northeast Pennsylvania,Pennsylvania,2,"865,804",113,187,0.0131%,0.0216%
+Colorado Springs,Colorado,2,"866,639",113,187,0.0130%,0.0216%
+North New Jersey,New Jersey,11,"4,060,833",788,862,0.0194%,0.0212%
+Atlanta,Georgia,16,"6,046,744","1,163","1,237",0.0192%,0.0205%
+Columbia,South Carolina,2,"932,111",113,187,0.0121%,0.0201%
+Northern Indiana,Indiana,1,"564,833",1,112,0.0002%,0.0198%
+Grand Rapids,Michigan,3,"1,324,160",188,262,0.0142%,0.0198%
+Pasco-Hernando,Florida,1,"577,168",1,112,0.0002%,0.0194%
+Tampa,Florida,3,"1,377,808",188,262,0.0136%,0.0190%
+Central Indiana,Indiana,6,"2,565,675",413,487,0.0161%,0.0190%
+Oklahoma City,Oklahoma,2,"1,053,382",113,187,0.0107%,0.0178%
+Lehigh Valley,Pennsylvania,1,"631,001",1,112,0.0002%,0.0177%
+Central Iowa,Iowa,1,"638,567",1,112,0.0002%,0.0175%
+Spokane,Washington,1,"654,323",1,112,0.0002%,0.0171%
+Richmond,Virginia,3,"1,543,390",188,262,0.0122%,0.0170%
+Birmingham,Alabama,2,"1,113,037",113,187,0.0102%,0.0168%
+Greater Baltimore,Maryland,5,"2,467,787",338,412,0.0137%,0.0167%
+West Suburban Illinois,Illinois,7,"3,392,419",488,562,0.0144%,0.0166%
+Jacksonville,Florida,3,"1,582,186",188,262,0.0119%,0.0166%
+Baton Rouge,Louisiana,1,"680,006",1,112,0.0001%,0.0165%
+Salt Lake,Utah,5,"2,562,666",338,412,0.0132%,0.0161%
+Space Coast,Florida,1,"700,609",1,112,0.0001%,0.0160%
+North Texas,Texas,10,"4,990,546",713,787,0.0143%,0.0158%
+Charlotte Metro,"Multiple (North Carolina,
+South Carolina)",4,"2,166,048",263,337,0.0121%,0.0156%
+Southwest Louisiana,Louisiana,1,"721,005",1,112,0.0001%,0.0155%
+Wichita,Kansas,1,"741,264",1,112,0.0001%,0.0151%
+Broward County,Florida,3,"1,735,460",188,262,0.0108%,0.0151%
+Tidewater,Virginia,2,"1,265,599",113,187,0.0089%,0.0148%
+Orange County,California,5,"2,830,414",338,412,0.0119%,0.0146%
+Suffolk County,New York,2,"1,299,884",113,187,0.0087%,0.0144%
+Central Arkansas,Arkansas,1,"779,166",1,112,0.0001%,0.0144%
+Miami,Florida,4,"2,353,208",263,337,0.0112%,0.0143%
+Ventura County,California,1,"788,677",1,112,0.0001%,0.0142%
+Palm Beach County,Florida,2,"1,317,120",113,187,0.0086%,0.0142%
+Memphis Midsouth,Tennessee,2,"1,320,872",113,187,0.0086%,0.0142%
+Northwest Ohio,Ohio,1,"791,530",1,112,0.0001%,0.0141%
+Phoenix,Arizona,7,"3,977,709",488,562,0.0123%,0.0141%
+Fort Worth,Texas,3,"1,856,720",188,262,0.0101%,0.0141%
+Middle Tennessee,Tennessee,4,"2,413,644",263,337,0.0109%,0.0140%
+Nassau County,New York,2,"1,344,374",113,187,0.0084%,0.0139%
+Houston,Texas,11,"6,319,693",788,862,0.0125%,0.0136%
+Inland Empire,California,7,"4,192,841",488,562,0.0116%,0.0134%
+Pensacola,Florida,1,"926,636",1,112,0.0001%,0.0121%
+South New Jersey,New Jersey,2,"1,670,175",113,187,0.0068%,0.0112%
+Rio Grande Valley,Texas,1,"1,140,696",1,112,0.0001%,0.0098%
+North Alabama,Alabama,1,"1,433,638",1,112,0.0001%,0.0078%
+At-Large,N/A,43,"125,675,566","3,188","3,262",0.0025%,0.0026%

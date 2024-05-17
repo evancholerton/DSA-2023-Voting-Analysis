@@ -112,8 +112,3 @@ print("\nLogistic Regression Results:")
 print(f"Coefficient: {coef}")
 print(f"Intercept: {intercept}")
 print(f"Odds Ratio: {odds_ratio}")
-
-# Visualization of the sigmoid function
-# Create a DataFrame for chapter sizes for plotting the sigmoid curve
-chapter_size_range = pd.DataFrame({'chapter_size': np.linspace(X['chapter_size'].min(), X['chapter_size'].max(), 300)})
-predicted_probabilities = log_reg.predict_proba(chapter_size_range)[:, 1]
