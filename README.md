@@ -2,7 +2,7 @@
 Simple t-test on publicly available info for DSA chapters related to the 2023 DSA National Convention
 
 - Are bigger chapters really more "moderate"? (Yes)
-- Are bigger chapters *relative to their area's overall population* more "moderate"? (No)
+- Are bigger chapters *relative to their area's overall population* more "moderate"? (No, and neither vice versa)
 
 ---
 
