@@ -1,8 +1,8 @@
 # DSA 2023 Voting Analysis
-Simple t-tests on publicly available data for DSA chapters
+Simple t-test on publicly available info for DSA chapters related to the 2023 DSA National Convention
 
 - Are bigger chapters really more "moderate"? (Yes)
-- Are bigger chapters *relative to their area's overall population* more "moderate"? (No)
+- Are bigger chapters *relative to their area's overall population* more "moderate"? (No, and neither vice versa)
 
 ---
 
@@ -48,6 +48,8 @@ for second-choice; and they are categorized as "moderate" if they voted for
 - Rose DuBois
 
 for second-choice.
+
+*(IMPORTANT: The delegate-level voter data for the 2023 DSA National Convention may or may not be sensitive information. For the sake of caution, it won't be publicly available here (at least for now). If you want to clone this data and run it yourself, please contact me at evancholerton@gmail.com, or DM me on Twitter/Instagram at @evancholerton, and send verification that you're a DSA member.)*
 
 ---
 
