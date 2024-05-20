@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from scipy.stats import ttest_ind
+import seaborn as sns
+from scipy.stats import mannwhitneyu, shapiro, levene
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
@@ -23,7 +24,7 @@ left_slates = ["Alexander Morash", "Brandy Pride", "Julius Kapushinski", "Luisa 
                "Anti-Zionist", "Bread & Roses", "Emerge", "Libertarian Socialist Caucus", 
                "Marxist Unity Group", "Red Labor", "Red Star", "Reform & Revolution"]
 
-# List of second choice candidates that determine if "Aaron Berger" voters are "left" or "moderate"
+# List of second choice candidates that determine if Aaron Berger voters are "left" or "moderate"
 left_second_choices = ["Ahmed Husain", "C.S. Jackson", "Catherine Elias", "John Lewis", "Jorge Rocha",
                        "Kristin Schall", "Megan Romer", "Rashad X", "Sam Heft-Luthy", "Tom Julstrom"]
 moderate_second_choices = ["Cara Tobe", "Colleen Johnston", "Grace Mausser", "Renée Paradis", "Rose DuBois"]
@@ -75,39 +76,32 @@ moderate_sizes = merged_df[merged_df['slate_category'] == 'moderate']['Absolute 
 left_population_high = merged_df[merged_df['slate_category'] == 'left']['DSA % Population']
 moderate_population_high = merged_df[merged_df['slate_category'] == 'moderate']['DSA % Population']
 
-# Perform t-tests
-t_stat_sizes, p_value_sizes = ttest_ind(left_sizes, moderate_sizes, equal_var=False)
-t_stat_population_high, p_value_population_high = ttest_ind(left_population_high, moderate_population_high, equal_var=False)
+# Perform Mann-Whitney U test
+u_stat_sizes, p_value_sizes_mannwhitney = mannwhitneyu(left_sizes, moderate_sizes, alternative='two-sided')
+u_stat_population_high, p_value_population_high_mannwhitney = mannwhitneyu(left_population_high, moderate_population_high, alternative='two-sided')
 
-# Print results
-print("\nDescriptive Statistics (Absolute Chapter Size):")
-print(descriptive_stats_sizes)
-print("\nT-Test Results (Absolute Chapter Size):")
-print(f"t-statistic: {t_stat_sizes}, p-value: {p_value_sizes}")
+print("\nMann-Whitney U Test Results (Absolute Chapter Size):")
+print(f"U-statistic: {u_stat_sizes}, p-value: {p_value_sizes_mannwhitney}")
 
-print("\nDescriptive Statistics (DSA % Population):")
-print(descriptive_stats_population_high)
-print("\nT-Test Results (DSA % Population):")
-print(f"t-statistic: {t_stat_population_high}, p-value: {p_value_population_high}")
+print("\nMann-Whitney U Test Results (DSA % Population):")
+print(f"U-statistic: {u_stat_population_high}, p-value: {p_value_population_high_mannwhitney}")
 
 # Visualization for Absolute Chapter Size
 plt.figure(figsize=(10, 6))
-merged_df.boxplot(column='Absolute Chapter Size', by='slate_category')
+sns.boxplot(x='slate_category', y='Absolute Chapter Size', data=merged_df)
 plt.title('Absolute Chapter Size by Slate Category')
-plt.suptitle('')
 plt.xlabel('Slate Category')
 plt.ylabel('Absolute Chapter Size')
-plt.savefig('absolute_chapter_size_by_slate_category.png')
+plt.savefig('boxplot_absolute_chapter_size.png')
 plt.show()
 
 # Visualization for DSA % Population
 plt.figure(figsize=(10, 6))
-merged_df.boxplot(column='DSA % Population', by='slate_category')
+sns.boxplot(x='slate_category', y='DSA % Population', data=merged_df)
 plt.title('DSA % Population by Slate Category')
-plt.suptitle('')
 plt.xlabel('Slate Category')
 plt.ylabel('DSA % Population')
-plt.savefig('dsa_%_population_by_slate_category.png')
+plt.savefig('boxplot_dsa_population.png')
 plt.show()
 
 # Logistic Regression Analysis
@@ -153,7 +147,7 @@ plt.xlabel('Absolute Chapter Size')
 plt.ylabel('Probability of Left Slate')
 plt.title('Logistic Regression Curve for Absolute Chapter Size')
 plt.legend()
-plt.savefig('logistic_regression_curve_abs_chapter_size.png')
+plt.savefig('logistic_regression_curve_chapter_sizes.png')
 plt.show()
 
 # Plot the logistic regression curve for DSA % Population
@@ -164,5 +158,10 @@ plt.xlabel('DSA % Population')
 plt.ylabel('Probability of Left Slate')
 plt.title('Logistic Regression Curve for DSA % Population')
 plt.legend()
-plt.savefig('logistic_regression_curve_dsa_%_population.png')
+plt.savefig('logistic_regression_curve_population_high.png')
 plt.show()
+
+# Class imbalance check
+left_count = sum(merged_df['slate_binary'])
+moderate_count = len(merged_df['slate_binary']) - left_count
+print(f"\nClass distribution:\nLeft: {left_count}\nModerate: {moderate_count}")
